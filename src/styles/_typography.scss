@@ -1,0 +1,216 @@
+// typography
+
+// Font Family
+$font-family: 'San Francisco', sans-serif;
+
+// Headings
+$heading-1: (
+  font-family: 'San Francisco',
+  font-weight: 600,
+  size: 72px,
+  line-height: 80px,
+  letter-spacing: 0px,
+);
+
+$heading-2: (
+  font: 500,
+  size: 48px,
+  line-height: 54px,
+  letter-spacing: 0px,
+);
+
+$heading-3: (
+  font: 600,
+  size: 40px,
+  line-height: 48px,
+  letter-spacing: 0px,
+);
+
+$heading-4: (
+  font: 600,
+  size: 36px,
+  line-height: 44px,
+  letter-spacing: 0px,
+);
+
+$heading-5: (
+  font: 600,
+  size: 32px,
+  line-height: 40px,
+  letter-spacing: 0px,
+);
+
+// Subheadings
+$subheading-1-semibold: (
+  font: 600,
+  size: 28px,
+  line-height: 34px,
+  letter-spacing: 0px,
+);
+
+$subheading-1-medium: (
+  font: 500,
+  size: 28px,
+  line-height: 34px,
+  letter-spacing: 0px,
+);
+
+$subheading-2-bold: (
+  font: 700,
+  size: 24px,
+  line-height: 30px,
+  letter-spacing: 0px,
+);
+
+$subheading-2-semibold: (
+  font: 600,
+  size: 24px,
+  line-height: 30px,
+  letter-spacing: 0px,
+);
+
+$subheading-2-medium: (
+  font: 500,
+  size: 24px,
+  line-height: 30px,
+  letter-spacing: 0px,
+);
+
+$subheading-2-small-semibold: (
+  font: 600,
+  size: 20px,
+  line-height: 28px,
+  letter-spacing: 0px,
+);
+
+// Body Text
+$body-1-semibold: (
+  font: 600,
+  size: 20px,
+  line-height: 28px,
+  letter-spacing: 0px,
+);
+
+$body-1-medium: (
+  font: 500,
+  size: 20px,
+  line-height: 28px,
+  letter-spacing: 0px,
+);
+
+$body-1-regular: (
+  font: 400,
+  size: 20px,
+  line-height: 28px,
+  letter-spacing: 0px,
+);
+
+$body-2-semibold: (
+  font: 600,
+  size: 18px,
+  line-height: 26px,
+  letter-spacing: 0px,
+);
+
+$body-2-medium: (
+  font: 500,
+  size: 18px,
+  line-height: 26px,
+  letter-spacing: 0px,
+);
+
+$body-2-regular: (
+  font: 400,
+  size: 18px,
+  line-height: 26px,
+  letter-spacing: 0px,
+);
+
+$body-3-semibold: (
+  font: 600,
+  size: 16px,
+  line-height: 24px,
+  letter-spacing: 0px,
+);
+
+$body-3-medium: (
+  font: 500,
+  size: 16px,
+  line-height: 24px,
+  letter-spacing: 0px,
+);
+
+$body-3-regular: (
+  font: 400,
+  size: 16px,
+  line-height: 24px,
+  letter-spacing: 0px,
+);
+
+// Captions
+$caption-1-semibold: (
+  font: 600,
+  size: 14px,
+  line-height: 20px,
+  letter-spacing: 0px,
+);
+
+$caption-1-medium: (
+  font: 500,
+  size: 14px,
+  line-height: 20px,
+  letter-spacing: 0px,
+);
+
+$caption-1-regular: (
+  font: 400,
+  size: 14px,
+  line-height: 20px,
+  letter-spacing: 0px,
+);
+
+// // Міксин для типографії
+@mixin typography($type) {
+  font-family: $font-family;
+  font-weight: map-get($type, font);
+  font-size: map-get($type, size);
+  line-height: map-get($type, line-height);
+  letter-spacing: map-get($type, letter-spacing);
+}
+
+// Застосування типографії
+h1 {
+  @include typography($heading-1);
+}
+
+h2 {
+  @include typography($heading-2);
+}
+
+h3 {
+  @include typography($heading-3);
+}
+
+h4 {
+  @include typography($heading-4);
+}
+
+h5 {
+  @include typography($heading-5);
+}
+
+.subheading-1 {
+  @include typography($subheading-1-semibold);
+}
+
+.body-1 {
+  @include typography($body-1-regular);
+}
+
+.caption {
+  @include typography($caption-1-regular);
+}
+
+body {
+  font-family: 'San Francisco', sans-serif;
+}

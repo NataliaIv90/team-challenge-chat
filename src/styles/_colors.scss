@@ -1,0 +1,19 @@
+// colors
+
+$primary-color: #7339e5;
+$secondary-color: #b9b6d5;
+$tertiary-color: #20225d;
+$black-color: #020326;
+$gray-color: #454e6a;
+$white-color: #ffffff;
+$error-color: #da1e28;
+$primary-shadow-color: #804cef;
+$secondary-shadow-color: #b9b6d526;
+// Main Gradient
+
+$main-gradient-start: #020326;
+$main-gradient-end: #07014f;
+
+@mixin main-gradient {
+  background: linear-gradient(135deg, $main-gradient-start, $main-gradient-end);
+}

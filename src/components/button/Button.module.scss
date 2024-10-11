@@ -1,0 +1,65 @@
+.btn {
+  border: none;
+  color: $white-color;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.large {
+  @include typography($body-1-semibold);
+  padding: 20px 24px;
+  border-radius: 12px;
+}
+
+.medium {
+  @include typography($body-2-semibold);
+  padding: 13px 24px;
+  border-radius: 8px;
+}
+
+.small {
+  @include typography($body-3-semibold);
+  padding: 9px 24px;
+  border-radius: 8px;
+}
+
+.primary {
+  background-color: $primary-color;
+  box-shadow: 0px 2px 1px 0px $primary-shadow-color inset;
+
+  &:hover {
+    background-color: $primary-shadow-color;
+  }
+}
+
+.secondary {
+  background-color: $secondary-color;
+  box-shadow: 0px 2px 1px 0px rgba(185, 182, 213, 0.15) inset;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.text {
+  background-color: transparent;
+}
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.btn-icon-small {
+  width: 18px;
+  height: 18px;
+}
