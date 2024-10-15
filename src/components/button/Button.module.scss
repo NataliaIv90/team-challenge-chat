@@ -1,17 +1,23 @@
 .btn {
   border: none;
   color: $white-color;
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.btn-content {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
+  transition: all 0.2s ease-in;
+
+  &:active {
+    cursor: pointer;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
 }
 
 .large {
@@ -33,25 +39,74 @@
 }
 
 .primary {
-  background-color: $primary-color;
-  box-shadow: 0px 2px 1px 0px $primary-shadow-color inset;
+  background: $primary-color;
+  box-shadow: 0px 2px 1px 0px $btn-shadow-color inset;
 
   &:hover {
-    background-color: $primary-shadow-color;
+    background: $primary-hover-btn-bg;
+  }
+
+  &:active {
+    background: $primary-active-btn-bg;
+  }
+
+  &:disabled {
+    background: $primary-active-btn-bg;
   }
 }
 
+.btn-icon-primary path {
+  fill: $white-color;
+}
+
 .secondary {
-  background-color: $secondary-color;
-  box-shadow: 0px 2px 1px 0px rgba(185, 182, 213, 0.15) inset;
+  background: $secondary-btn-color;
+  color: $secondary-color;
+  box-shadow: 0px 2px 1px 0px $btn-shadow-color inset;
 
   &:hover {
-    opacity: 0.9;
+    background: $secondary-hover-btn-bg;
   }
+
+  &:active {
+    background: $secondary-active-btn-bg;
+  }
+
+  &:disabled {
+    background: $secondary-active-btn-bg;
+  }
+}
+
+.btn-icon-secondary path {
+  stroke: $secondary-color;
 }
 
 .text {
   background-color: transparent;
+
+  &:hover {
+    color: $secondary-color;
+  }
+
+  &:active {
+    color: $secondary-color-80;
+  }
+
+  &:disabled {
+    color: $secondary-color-80;
+  }
+}
+
+.btn-icon-text path {
+  stroke: $white-color;
+}
+
+.text:hover > .btn-icon-text path {
+  stroke: $secondary-color;
+}
+
+.text:active > .btn-icon-text path {
+  stroke: $secondary-color-80;
 }
 
 .btn-icon {
@@ -62,4 +117,8 @@
 .btn-icon-small {
   width: 18px;
   height: 18px;
+}
+
+.btn-icon path {
+  transition: all 0.2s;
 }

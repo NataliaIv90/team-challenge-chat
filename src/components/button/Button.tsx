@@ -1,20 +1,9 @@
 import { FunctionComponent } from "react";
-import plusIcon from '../../assets/img/icons/icon-plus.svg';
-import styles from './Button.module.scss';
 
-type TButtonSize = 'small' | 'medium' | 'large';
-type TButtonVariant = 'primary' | 'secondary' | 'text';
-type TButtonType = 'button' | 'submit';
-type TButtonProps = {
-  text: string;
-  type?: TButtonType;
-  disabled?: boolean;
-  leftIcon?: boolean;
-  className?: string;
-  buttonVariant: TButtonVariant;
-  buttonSize: TButtonSize;
-  onClick?: () => {};
-}
+import LoadingIcon from '../../assets/img/icons/icon-loading.svg';
+import PlusIcon from '../../assets/img/icons/icon-plus.svg';
+import { TButtonProps } from "../../types/button";
+import styles from './Button.module.scss';
 
 export const Button: FunctionComponent<TButtonProps> = ({
   text,
@@ -24,6 +13,7 @@ export const Button: FunctionComponent<TButtonProps> = ({
   className,
   buttonVariant,
   buttonSize,
+  isLoading = false,
   onClick
 }) => {
   const classNameValue = [
@@ -33,6 +23,7 @@ export const Button: FunctionComponent<TButtonProps> = ({
     styles[buttonSize]
   ].filter((el) => el && el.length).join(' ');
 
+  const btnIconClassNameValues = `${styles['btn-icon']} ${styles[`btn-icon-${buttonSize}`]} ${styles[`btn-icon-${buttonVariant}`]}`;
   return (
     <button
       onClick={onClick}
@@ -40,17 +31,20 @@ export const Button: FunctionComponent<TButtonProps> = ({
       className={classNameValue}
       type={type}
     >
-      <span className={leftIcon ? `${styles['btn-content']}` : ''}>
-        {leftIcon
-          ? <img
-            className={`${styles['btn-icon']} ${styles[`btn-icon-${buttonSize}`]}`}
-            src={plusIcon}
-            alt="plus icon"
+      {isLoading
+        ? (
+          <LoadingIcon
+            className={btnIconClassNameValues}
           />
-          : null
-        }
-        <span>{text}</span>
-      </span>
+        ) : (
+          leftIcon
+            ? <PlusIcon
+              className={btnIconClassNameValues}
+            />
+            : null
+        )
+      }
+      <span>{text}</span>
     </button>
   );
 };

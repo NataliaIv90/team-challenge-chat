@@ -7,8 +7,34 @@ $black-color: #020326;
 $gray-color: #454e6a;
 $white-color: #ffffff;
 $error-color: #da1e28;
-$primary-shadow-color: #804cef;
-$secondary-shadow-color: #b9b6d526;
+$btn-shadow-color: rgba($secondary-color, 0.15);
+$secondary-active-btn-bg: rgba($secondary-color, 0.45);
+$secondary-color-60: rgba($secondary-color, 0.6);
+$secondary-color-80: rgba($secondary-color, 0.8);
+
+$primary-hover-btn-bg: linear-gradient(
+    0deg,
+    rgba(2, 3, 38, 0.3) 0%,
+    rgba(2, 3, 38, 0.3) 100%
+  ),
+  #7339e5;
+
+$primary-active-btn-bg: linear-gradient(
+    0deg,
+    rgba($secondary-color, 0.3) 0%,
+    rgba($secondary-color, 0.3) 100%
+  ),
+  #7339e5;
+
+$secondary-btn-color: rgba($secondary-color, 0.15);
+
+$secondary-hover-btn-bg: linear-gradient(
+    0deg,
+    rgba(2, 3, 38, 0.3) 0%,
+    rgba(2, 3, 38, 0.3) 100%
+  ),
+  rgba($secondary-color, 0.15);
+
 // Main Gradient
 
 $main-gradient-start: #020326;

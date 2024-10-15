@@ -1,0 +1,83 @@
+.btn-sqr {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+  height: 48px;
+  width: 48px;
+  transition: all 0.1s ease-in;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+
+  &:active:not(:disabled) {
+    cursor: pointer;
+    background: $secondary-color-80;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: $btn-shadow-color;
+  }
+
+  &:disabled {
+    cursor: default;
+    background: transparent;
+  }
+}
+
+.btn-icon path {
+  stroke: $primary-color;
+}
+
+.btn-sqr:active > .btn-icon path,
+.btn-sqr:hover > .btn-icon path {
+  stroke: $primary-color;
+}
+
+.btn-sqr:disabled > .btn-icon path {
+  stroke: $secondary-color-80;
+}
+
+.btn-small {
+  height: 40px;
+  width: 40px;
+}
+
+.btn-icon__large {
+  height: 32px;
+  width: auto;
+}
+
+.btn-icon__small {
+  height: 24px;
+  width: auto;
+}
+
+.btn-sqr.outlined {
+  box-shadow: none;
+  border: 1px solid $secondary-color;
+  background: $secondary-btn-color;
+
+  &:hover {
+    border: 1px solid $secondary-active-btn-bg;
+    background: $secondary-hover-btn-bg;
+  }
+
+  &:disabled {
+    border: 1px solid $secondary-active-btn-bg;
+    background: $secondary-active-btn-bg;
+  }
+
+  &:active {
+    border: 1px solid $secondary-active-btn-bg;
+    background: $secondary-color-80;
+  }
+
+  &.isLoading {
+    border: 1px solid $secondary-color;
+    background: $btn-shadow-color;
+  }
+}
