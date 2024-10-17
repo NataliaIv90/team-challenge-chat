@@ -54,3 +54,7 @@ export type TNavItemProps = Partial<
   Omit<TButtonProps, 'buttonVariant' | 'buttonSize' | 'isSmall'>
 > &
   TNavItemRequiredProps;
+
+export type NavDrawerProps = {
+  showText: boolean;
+};

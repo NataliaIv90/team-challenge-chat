@@ -1,0 +1,12 @@
+.nav-drawer {
+  height: 100vh;
+  padding: 24px 32px;
+  display: grid;
+  grid-template-rows: 56px auto 56px;
+  gap: 48px;
+}
+
+.nav-drawer__list {
+  list-style: none;
+  padding: 0;
+}
