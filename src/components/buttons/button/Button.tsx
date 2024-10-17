@@ -1,7 +1,6 @@
 import { FunctionComponent } from 'react';
 
 import LoadingIcon from '@icons/icon-loading.svg';
-import PlusIcon from '@icons/icon-plus.svg';
 import { TButtonProps } from '@/types/button';
 
 import styles from './Button.module.scss';
@@ -10,7 +9,7 @@ export const Button: FunctionComponent<TButtonProps> = ({
   text,
   type = 'button',
   disabled,
-  leftIcon = false,
+  icon: Icon,
   className,
   buttonVariant,
   buttonSize,
@@ -36,8 +35,8 @@ export const Button: FunctionComponent<TButtonProps> = ({
     >
       {isLoading ? (
         <LoadingIcon className={btnIconClassNameValues} />
-      ) : leftIcon ? (
-        <PlusIcon className={btnIconClassNameValues} />
+      ) : Icon ? (
+        <Icon className={btnIconClassNameValues} />
       ) : null}
       <span>{text}</span>
     </button>

@@ -1,0 +1,32 @@
+.fab-btn {
+  border: none;
+  border-radius: 48px;
+  background-color: $secondary-btn-color;
+  box-shadow: 0px 2px 1px 0px $secondary-btn-color inset;
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.1s ease-in;
+  width: 48px;
+  height: 48px;
+
+  &:hover {
+    cursor: pointer;
+    background: $secondary-hover-btn-bg;
+  }
+
+  &:active {
+    cursor: pointer;
+    background-color: rgba($secondary-color, 0.45);
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.fab__icon path {
+  stroke: $secondary-color;
+}

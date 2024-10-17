@@ -1,6 +1,6 @@
 import styles from './App.module.scss';
 import icon from '@icons/icon-edit.svg';
-import { Button, IconButton } from '@/components';
+import { Button, FABbtn, IconButton } from '@/components';
 
 export const App = () => {
   return (
@@ -101,6 +101,9 @@ export const App = () => {
           buttonVariant="standart"
           isSmall={true}
         />
+      </div>
+      <div style={{ display: 'flex', gap: '10px', alignItems: 'flex-end' }}>
+        <FABbtn icon={icon} />
       </div>
     </div>
   );

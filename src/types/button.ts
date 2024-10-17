@@ -12,7 +12,6 @@ export type TButtonProps = {
   text: string;
   type?: TButtonType;
   disabled?: boolean;
-  leftIcon?: boolean;
   icon?: TIcon;
   className?: string;
   buttonVariant: TButtonVariant;
@@ -33,3 +32,12 @@ export type TIconButtonProps = Partial<
   Omit<TButtonProps, 'buttonVariant' | 'text' | 'leftIcon' | 'buttonSize'>
 > &
   TIconBtnRequiredProps;
+
+export type TFABbtnRequiredProps = {
+  icon: TIcon;
+};
+
+export type TFABbtnProps = Partial<
+  Omit<TButtonProps, 'buttonVariant' | 'buttonSize' | 'isLoading' | 'isSmall'>
+> &
+  TFABbtnRequiredProps;
