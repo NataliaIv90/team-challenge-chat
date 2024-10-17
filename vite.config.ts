@@ -8,20 +8,27 @@ export default defineConfig({
     react(),
     svgr({
       // svgr options: https://react-svgr.com/docs/options/
-      svgrOptions: { exportType: "default", ref: true, svgo: false, titleProp: true },
+      svgrOptions: {
+        exportType: "default",
+        ref: true,
+        svgo: false,
+        titleProp: true
+      },
       include: "**/*.svg",
     }),
   ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+      '@images': path.resolve(__dirname, './src/assets/img'),
+      '@icons': path.resolve(__dirname, './src/assets/img/icons'),
     },
   },
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "../../styles/main.scss";`
-      }
-    }
-  }
+        additionalData: `@import "@/styles/main.scss";`,
+      },
+    },
+  },
 });

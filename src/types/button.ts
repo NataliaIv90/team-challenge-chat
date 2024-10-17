@@ -1,6 +1,4 @@
-// import { ReactSVG } from "react";
-
-import { FunctionComponent, SVGProps } from "react";
+import { FunctionComponent, SVGProps } from 'react';
 
 export type TButtonSize = 'small' | 'medium' | 'large';
 
@@ -21,7 +19,7 @@ export type TButtonProps = {
   buttonSize: TButtonSize;
   isLoading?: boolean;
   onClick?: () => {};
-}
+};
 
 export type TIconBtnVariant = 'outlined' | 'standart';
 
@@ -31,7 +29,7 @@ export type TIconBtnRequiredProps = {
   isSmall: boolean;
 };
 
-
-export type TIconButtonProps =
-  Partial<Omit<TButtonProps, 'buttonVariant' | 'text' | 'leftIcon' | 'buttonSize'>>
-  & TIconBtnRequiredProps;
+export type TIconButtonProps = Partial<
+  Omit<TButtonProps, 'buttonVariant' | 'text' | 'leftIcon' | 'buttonSize'>
+> &
+  TIconBtnRequiredProps;

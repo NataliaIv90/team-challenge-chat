@@ -1,6 +1,8 @@
-import { FunctionComponent } from "react";
-import LoadingIcon from '../../assets/img/icons/icon-loading.svg';
-import { TIconButtonProps } from "../../types/button";
+import { FunctionComponent } from 'react';
+
+import LoadingIcon from '@icons/icon-loading.svg';
+import { TIconButtonProps } from '@/types/button';
+
 import styles from './IconButton.module.scss';
 
 export const IconButton: FunctionComponent<TIconButtonProps> = ({
@@ -11,14 +13,16 @@ export const IconButton: FunctionComponent<TIconButtonProps> = ({
   buttonVariant,
   isSmall,
   isLoading = false,
-  onClick
+  onClick,
 }) => {
   const classNameValue = [
     styles['btn-sqr'],
     className,
     styles[buttonVariant],
-    isSmall ? styles['btn-small'] : ''
-  ].filter((el) => el && el.length).join(' ');
+    isSmall ? styles['btn-small'] : '',
+  ]
+    .filter((el) => el && el.length)
+    .join(' ');
 
   const iconClassName = `${styles['btn-icon']} ${isSmall ? styles['btn-icon__small'] : styles['btn-icon__large']}`;
 

@@ -4,7 +4,7 @@ const eslintPluginReactHooks = require('eslint-plugin-react-hooks');
 const eslintPluginPrettier = require('eslint-plugin-prettier');
 const eslintPluginTypeScript = require('@typescript-eslint/eslint-plugin');
 const eslintPluginReactRefresh = require('eslint-plugin-react-refresh');
-const eslintPluginReactCompiler = require('eslint-plugin-react-compiler');
+// const eslintPluginReactCompiler = require('eslint-plugin-react-compiler');
 const eslintParserTypeScript = require('@typescript-eslint/parser');
 
 module.exports = [
@@ -24,7 +24,7 @@ module.exports = [
       'react-hooks': eslintPluginReactHooks,
       prettier: eslintPluginPrettier,
       '@typescript-eslint': eslintPluginTypeScript,
-      'react-compiler': eslintPluginReactCompiler,
+      // 'react-compiler': eslintPluginReactCompiler,
     },
     rules: {
       'react-refresh/only-export-components': [
@@ -33,7 +33,7 @@ module.exports = [
       ],
       '@typescript-eslint/no-explicit-any': 'error',
       'react/react-in-jsx-scope': 'error',
-      'react-compiler/react-compiler': 'error',
+      // 'react-compiler/react-compiler': 'error',
       '@typescript-eslint/no-unused-vars': [
         'error',
         { varsIgnorePattern: '^React$' },
@@ -41,6 +41,7 @@ module.exports = [
       'prettier/prettier': 'error',
       'react/jsx-uses-react': 'error',
       'react/jsx-uses-vars': 'error',
+      quotes: ['error', 'single'],
     },
     settings: {
       react: {
