@@ -8,6 +8,8 @@ export type TButtonType = 'button' | 'submit';
 
 export type TIcon = FunctionComponent<SVGProps<SVGSVGElement>>;
 
+export type TFunction = () => {};
+
 export type TButtonProps = {
   text: string;
   type?: TButtonType;
@@ -17,7 +19,7 @@ export type TButtonProps = {
   buttonVariant: TButtonVariant;
   buttonSize: TButtonSize;
   isLoading?: boolean;
-  onClick?: () => {};
+  onClick?: TFunction;
 };
 
 export type TIconBtnVariant = 'outlined' | 'standart';
@@ -41,3 +43,14 @@ export type TFABbtnProps = Partial<
   Omit<TButtonProps, 'buttonVariant' | 'buttonSize' | 'isLoading' | 'isSmall'>
 > &
   TFABbtnRequiredProps;
+
+export type TNavItemRequiredProps = {
+  showText: boolean;
+  icon: TIcon;
+  selected: boolean;
+};
+
+export type TNavItemProps = Partial<
+  Omit<TButtonProps, 'buttonVariant' | 'buttonSize' | 'isSmall'>
+> &
+  TNavItemRequiredProps;

@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 
-import { TFABbtnProps } from '@/types/button';
+import { TFABbtnProps } from '@/types/components';
 
 import styles from './FABbtn.module.scss';
 

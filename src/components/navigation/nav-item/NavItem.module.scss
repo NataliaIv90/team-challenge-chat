@@ -1,0 +1,38 @@
+.nav-item__btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: stretch;
+  gap: 12px;
+  padding: 14px 24px 14px 16px;
+  color: $white-color;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  width: 272px;
+  height: 56px;
+  line-height: 28px;
+
+  &:hover {
+    cursor: pointer;
+    background: $secondary-hover-btn-bg;
+  }
+
+  &:active {
+    background: $secondary-active-btn-bg;
+  }
+
+  &.selected {
+    background: $primary-color;
+    cursor: auto;
+  }
+}
+
+.nav-item__icon path {
+  stroke: $white-color;
+}
+
+.nav-item__narrow {
+  width: auto;
+  padding: 14px;
+}

@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 
 import LoadingIcon from '@icons/icon-loading.svg';
-import { TButtonProps } from '@/types/button';
+import { TButtonProps } from '@/types/components';
 
 import styles from './Button.module.scss';
 

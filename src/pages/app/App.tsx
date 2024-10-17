@@ -1,6 +1,6 @@
 import styles from './App.module.scss';
 import icon from '@icons/icon-edit.svg';
-import { Button, FABbtn, IconButton } from '@/components';
+import { Button, FABbtn, IconButton, NavItem } from '@/components';
 
 export const App = () => {
   return (
@@ -104,6 +104,33 @@ export const App = () => {
       </div>
       <div style={{ display: 'flex', gap: '10px', alignItems: 'flex-end' }}>
         <FABbtn icon={icon} />
+        <NavItem icon={icon} showText={true} text="Nav item" selected={false} />
+        <NavItem
+          icon={icon}
+          showText={true}
+          text="Nav item"
+          selected={false}
+          isLoading={true}
+        />
+        <NavItem icon={icon} showText={true} text="Nav item" selected={true} />
+      </div>
+
+      <div style={{ display: 'flex', gap: '10px', alignItems: 'flex-end' }}>
+        <FABbtn icon={icon} />
+        <NavItem
+          icon={icon}
+          showText={false}
+          text="Nav item"
+          selected={false}
+        />
+        <NavItem
+          icon={icon}
+          showText={false}
+          text="Nav item"
+          selected={false}
+          isLoading={true}
+        />
+        <NavItem icon={icon} showText={false} text="Nav item" selected={true} />
       </div>
     </div>
   );
