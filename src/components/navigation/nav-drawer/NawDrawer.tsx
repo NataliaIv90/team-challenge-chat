@@ -1,10 +1,8 @@
 import { FunctionComponent } from 'react';
 
-import ChatIcon from '@icons/icon-chats.svg';
 import MenuIcon from '@icons/icon-menu.svg';
-import { NavItem } from '@/components';
+import { NavItem, NavList } from '@/components';
 import { NavDrawerProps } from '@/types/components';
-import PlusIcon from '@icons/icon-plus-circle.svg';
 import SettingsIcon from '@icons/icon-settings.svg';
 
 import styles from './NavDrawer.module.scss';
@@ -14,7 +12,6 @@ export const NavDrawer: FunctionComponent<NavDrawerProps> = ({
 }) => {
   const sectionClassName = styles['nav-drawer'];
   const headerClassName = styles['nav-drawer__header'];
-  const listClassName = styles['nav-drawer__list'];
   const footerClassName = styles['nav-drawer__footer'];
 
   return (
@@ -22,15 +19,9 @@ export const NavDrawer: FunctionComponent<NavDrawerProps> = ({
       <div className={headerClassName}>
         <NavItem icon={MenuIcon} showText={false} selected={false} />
       </div>
-      <ul className={listClassName}>
-        <NavItem icon={ChatIcon} text='Chats' showText={showText} selected={false} />
-        <NavItem
-          icon={PlusIcon}
-          showText={showText}
-          text="Create chat"
-          selected={false}
-        />
-      </ul>
+
+      <NavList showText={showText} />
+
       <div className={footerClassName}>
         <NavItem
           icon={SettingsIcon}
