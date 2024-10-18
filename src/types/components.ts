@@ -1,4 +1,4 @@
-import { FunctionComponent, SVGProps } from 'react';
+import { ChangeEvent, FunctionComponent, SVGProps } from 'react';
 
 export type TButtonSize = 'small' | 'medium' | 'large';
 
@@ -8,7 +8,7 @@ export type TButtonType = 'button' | 'submit';
 
 export type TIcon = FunctionComponent<SVGProps<SVGSVGElement>>;
 
-export type TFunction = () => {};
+export type TFunction = () => void;
 
 export type TButtonProps = {
   text: string;
@@ -57,4 +57,19 @@ export type TNavItemProps = Partial<
 
 export type NavDrawerProps = {
   showText: boolean;
+};
+
+export type TInputProps = {
+  type: 'text';
+  value: string;
+  placeholder: string;
+  label?: string;
+  supportiveText?: string;
+  error?: string;
+  searchIcon?: boolean;
+  closeBtn?: boolean;
+  id: string;
+  closeBtnOnClick: TFunction;
+  onInpChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  disabled?: boolean;
 };

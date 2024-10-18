@@ -1,7 +1,7 @@
 // colors
 
 $primary-color: #7339e5;
-$secondary-color: #b9b6d5;
+$secondary-color: rgb(185, 182, 213);
 $tertiary-color: #20225d;
 $black-color: #020326;
 $gray-color: #454e6a;
@@ -17,7 +17,7 @@ $primary-hover-btn-bg: linear-gradient(
     rgba(2, 3, 38, 0.3) 0%,
     rgba(2, 3, 38, 0.3) 100%
   ),
-  #7339e5;
+  rgb(115, 57, 229);
 
 $primary-active-btn-bg: linear-gradient(
     0deg,

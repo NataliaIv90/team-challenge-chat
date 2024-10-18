@@ -1,0 +1,101 @@
+.inp {
+  border: 1px solid transparent;
+  min-width: 210px;
+  max-width: 100%;
+  width: 100%;
+  padding: 19px 12px 19px 24px;
+  margin: 0;
+  color: $white-color;
+  border-radius: 8px;
+  border: 1px solid rgba($secondary-color, 0.5);
+  background: rgba($secondary-color, 0.15);
+
+  @include typography($body-3-medium);
+
+  &:placeholder {
+    @include typography($body-3-regular);
+    color: $secondary-color;
+  }
+
+  &:hover {
+    border: 1px solid $secondary-active-btn-bg;
+    background: $secondary-hover-btn-bg;
+    cursor: pointer;
+  }
+
+  &:active {
+    border: 1px solid rgba($secondary-color, 0.5);
+    background: rgba($secondary-color, 0.5);
+  }
+
+  &:focus {
+    border: 1px solid $secondary-color;
+    background: rgba($secondary-color, 0.6);
+  }
+
+  &:disabled {
+    border: 1px solid rgba($secondary-color, 0.15);
+    background: #454e6a;
+    border: rgba($secondary-color, 0.5);
+    cursor: auto;
+
+    &::placeholder {
+      color: rgba($secondary-color, 0.5);
+    }
+  }
+
+  &.error {
+    border: 1px solid rgba($error-color, 0.9);
+    background: rgba($secondary-color, 0.15);
+  }
+}
+
+.label {
+  margin: 0;
+  color: $white-color;
+  @include typography($caption-1-regular);
+}
+
+.inp-wrapper {
+  position: relative;
+}
+
+.label.error {
+  color: $error-color;
+}
+
+.icon {
+  position: absolute;
+  left: 12px;
+  top: 19px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+
+.close-btn svg path {
+  stroke: $white-color;
+}
+
+.disabled svg path {
+  stroke: rgba($secondary-color, 0.5);
+}
+
+.icon path {
+  stroke: $white-color;
+}
+
+.padding-left {
+  padding-left: 52px;
+}
+
+.padding-right {
+  padding-right: 52px;
+}
+
+.disabled .close-btn .btn-icon path {
+  stroke: rgba($secondary-color, 0.5);
+}
