@@ -1,14 +1,12 @@
-import { ChangeEvent, useState } from 'react';
 import styles from './App.module.scss';
-import { Input, NavDrawer } from '@/components';
-// import CloseBtn from '@icons/icon-bell.svg';
+import { Avatar } from '@/components';
 
 export const App = () => {
-  const [value, setValue] = useState('');
+  // const [value, setValue] = useState('');
   return (
     <div className={styles.app}>
       <h1>Chatly</h1>
-      <Input
+      {/* <Input
         type='text'
         value={value}
         placeholder='Placeholder'
@@ -19,9 +17,10 @@ export const App = () => {
         closeBtn={true}
         searchIcon={true}
         closeBtnOnClick={() => alert('Close')}
-        disabled={true}
-      />
-      <NavDrawer showText={false} />
+      // disabled={true}
+      // error='Error msg'
+      /> */}
+      <Avatar name='Nataliia' />
     </div>
   );
 };
