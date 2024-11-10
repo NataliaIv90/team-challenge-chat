@@ -1,0 +1,22 @@
+.radio-wrapper {
+  margin-bottom: 20px;
+}
+
+.avatars-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  width: 100%;
+}
+
+.label {
+  @include typography($caption-1-medium);
+}
+
+.label-1 {
+  color: $white-color;
+}
+
+.label-2 {
+  color: $secondary-color;
+}

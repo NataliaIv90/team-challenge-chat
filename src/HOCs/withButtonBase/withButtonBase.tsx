@@ -18,9 +18,22 @@ export function withButtonBase<T extends TButtonBaseProps>(
   iconClassName: string,
   loadingClassName?: string
 ): FunctionComponent<T> {
-  return ({ type = 'button', icon: Icon, isLoading, disabled, onClick, className, children, ...props }) => {
-    const combinedClassName = [rootClassName, className].filter(Boolean).join(' ');
-    const iconClasses = isLoading ? `${iconClassName} ${loadingClassName}` : iconClassName;
+  return ({
+    type = 'button',
+    icon: Icon,
+    isLoading,
+    disabled,
+    onClick,
+    className,
+    children,
+    ...props
+  }) => {
+    const combinedClassName = [rootClassName, className]
+      .filter(Boolean)
+      .join(' ');
+    const iconClasses = isLoading
+      ? `${iconClassName} ${loadingClassName}`
+      : iconClassName;
 
     return (
       <button

@@ -55,4 +55,3 @@ export const IconButton = withButtonBase(
   styles['btn-icon'],
   styles['btn-loading']
 );
-

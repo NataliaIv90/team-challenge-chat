@@ -1,5 +1,7 @@
 export { Avatar } from './avatar/avatarIcon/Avatar';
 export { AvatarBtn } from './avatar/avatarBtn/AvatarBtn';
+export { AvatarRadio } from './avatar/avatarRadio/AvatarRadio';
+export { AvatarSettings } from './avatar/avatarSettings/AvatarSettings';
 export { Button } from './buttons/button/Button';
 export { IconButton } from './buttons/iconButton/IconButton';
 export { Input } from './input/Input';

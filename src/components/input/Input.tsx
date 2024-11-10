@@ -21,7 +21,9 @@ export const Input: FunctionComponent<TInputProps> = ({
   onInpChange,
   closeBtnOnClick,
 }) => {
-  const labelClassName = error ? `${styles['label']} ${styles['error']}` : styles['label'];
+  const labelClassName = error
+    ? `${styles['label']} ${styles['error']}`
+    : styles['label'];
 
   const inpWrapperClassname = [
     styles['inp-wrapper'],
@@ -36,23 +38,22 @@ export const Input: FunctionComponent<TInputProps> = ({
     styles['inp'],
     `${searchIcon ? styles['padding-left'] : ''}`,
     `${error ? styles['error'] : ''}`,
-    `${closeBtn ? styles['padding-right'] : ''}`
+    `${closeBtn ? styles['padding-right'] : ''}`,
   ]
     .filter((el) => el && el.length)
     .join(' ');
 
   return (
     <div>
-      {label ? <label htmlFor={id} className={labelClassName}>{label}</label> : null}
+      {label ? (
+        <label htmlFor={id} className={labelClassName}>
+          {label}
+        </label>
+      ) : null}
       <div className={inpWrapperClassname}>
-        {searchIcon
-          ? (
-            <SearchIcon
-              className={styles['icon']}
-              width={24}
-              height={24}
-            />
-          ) : null}
+        {searchIcon ? (
+          <SearchIcon className={styles['icon']} width={24} height={24} />
+        ) : null}
         <input
           disabled={disabled}
           type={type}
@@ -73,10 +74,9 @@ export const Input: FunctionComponent<TInputProps> = ({
           />
         ) : null}
       </div>
-      {error || supportiveText
-        ? <p className={labelClassName}>{error || supportiveText}</p>
-        : null
-      }
+      {error || supportiveText ? (
+        <p className={labelClassName}>{error || supportiveText}</p>
+      ) : null}
     </div>
   );
 };

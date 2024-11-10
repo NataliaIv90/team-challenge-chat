@@ -73,3 +73,24 @@ export type TInputProps = {
   onInpChange: (e: ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
 };
+
+export type TName = string;
+
+export type TAvatarId = '1_cat' | '3_dog' | '2_texture' | '3_arch' | '4_berry';
+
+export type TSize = 's' | 'm' | 'l' | 'xl';
+
+export type TAvatarProps = {
+  name: TName;
+  img?: TAvatarId;
+  selected?: boolean;
+  size: TSize;
+};
+
+export type TAvatarSettings = {
+  name: string;
+  selectedAvatar: TAvatarId | string;
+  avatarImg?: TAvatarId;
+  size: TSize;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
