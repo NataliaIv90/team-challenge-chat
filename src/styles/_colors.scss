@@ -7,7 +7,7 @@ $black-color: #020326;
 $gray-color: #454e6a;
 $white-color: #ffffff;
 $error-color: #da1e28;
-$gray-color-light:#B9B6D5;
+$gray-color-light: #b9b6d5;
 $btn-shadow-color: rgba($secondary-color, 0.15);
 $secondary-active-btn-bg: rgba($secondary-color, 0.45);
 $secondary-color-60: rgba($secondary-color, 0.6);
@@ -45,3 +45,5 @@ $main-gradient-end: #07014f;
 @mixin main-gradient {
   background: linear-gradient(135deg, $main-gradient-start, $main-gradient-end);
 }
+
+$box-shadow: 0px 2px 1px 0px rgba(185, 182, 213, 0.15) inset;

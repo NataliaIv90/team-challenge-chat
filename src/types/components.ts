@@ -82,15 +82,17 @@ export type TSize = 's' | 'm' | 'l' | 'xl';
 
 export type TAvatarProps = {
   name: TName;
-  img?: TAvatarId;
+  img?: TAvatarImgData;
   selected?: boolean;
   size: TSize;
 };
 
+export type TAvatarImgData = TAvatarId | string;
+
 export type TAvatarSettings = {
   name: string;
   selectedAvatar: TAvatarId | string;
-  avatarImg?: TAvatarId;
+  avatarImg?: TAvatarImgData;
   size: TSize;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
