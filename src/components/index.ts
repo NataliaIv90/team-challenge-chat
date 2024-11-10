@@ -1,4 +1,5 @@
-export { Avatar } from './avatar/Avatar';
+export { Avatar } from './avatar/avatarIcon/Avatar';
+export { AvatarBtn } from './avatar/avatarBtn/AvatarBtn';
 export { Button } from './buttons/button/Button';
 export { IconButton } from './buttons/iconButton/IconButton';
 export { Input } from './input/Input';

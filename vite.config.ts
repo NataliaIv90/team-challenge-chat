@@ -22,6 +22,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
       '@images': path.resolve(__dirname, './src/assets/img'),
       '@icons': path.resolve(__dirname, './src/assets/img/icons'),
+      '@avatarImgs': path.resolve(__dirname, './src/assets/img/avatar-img'),
     },
   },
   css: {
