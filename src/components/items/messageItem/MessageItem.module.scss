@@ -1,0 +1,56 @@
+.message-item-content {
+  overflow: hidden;
+  color: #fff;
+  background: transparent;
+  border: none;
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px 16px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 40px auto;
+  align-items: center;
+
+  &:hover {
+    background: $secondary-hover-btn-bg;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+  }
+
+  &.selected {
+    background-color: $secondary-color-60;
+    box-shadow: $box-shadow;
+  }
+
+  &:active {
+    background: $secondary-active-btn-bg;
+    box-shadow: $box-shadow;
+  }
+}
+
+.inline {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.name {
+  margin: 0;
+  @include typography($body-2-semibold);
+}
+
+.date {
+  margin: 0;
+  @include typography($caption-1-medium);
+  color: $secondary-color;
+}
+
+.message {
+  margin: 0;
+  @include typography($body-3-medium);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 28px;
+}
