@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 import styles from './App.module.scss';
-import { Input } from '@/components';
+import { Input, NavDrawer } from '@/components';
+// import CloseBtn from '@icons/icon-bell.svg';
 
 export const App = () => {
   const [value, setValue] = useState('');
@@ -11,16 +12,16 @@ export const App = () => {
         type='text'
         value={value}
         placeholder='Placeholder'
-        // supportiveText='supportive terx'
-        // label='Label'
+        supportiveText='supportive terx'
+        label='Label'
         onInpChange={(e: ChangeEvent<HTMLInputElement>) => { setValue(e.target.value) }}
         id='inp'
-        // closeBtn={true}
-        // searchIcon={true}
+        closeBtn={true}
+        searchIcon={true}
         closeBtnOnClick={() => alert('Close')}
-      // disabled={true}
-      // error='Error msg'
+        disabled={true}
       />
+      <NavDrawer showText={false} />
     </div>
   );
 };
