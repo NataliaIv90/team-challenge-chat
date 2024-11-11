@@ -15,12 +15,14 @@ export const Button: FunctionComponent<TButtonProps> = ({
   buttonSize,
   isLoading = false,
   onClick,
+  fullWidth = false,
 }) => {
   const classNameValue = [
     styles.btn,
     className,
     styles[buttonVariant],
-    styles[buttonSize],
+    `${buttonSize ? styles[buttonSize] : ''}`,
+    `${fullWidth ? styles['wide'] : ''}`,
   ]
     .filter((el) => el && el.length)
     .join(' ');

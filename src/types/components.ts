@@ -17,9 +17,10 @@ export type TButtonProps = {
   icon?: TIcon;
   className?: string;
   buttonVariant: TButtonVariant;
-  buttonSize: TButtonSize;
+  buttonSize?: TButtonSize;
   isLoading?: boolean;
   onClick?: TFunction;
+  fullWidth?: boolean;
 };
 
 export type TIconBtnVariant = 'outlined' | 'standart';

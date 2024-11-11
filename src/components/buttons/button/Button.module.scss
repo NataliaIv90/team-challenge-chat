@@ -18,6 +18,22 @@
   &:disabled {
     cursor: default;
   }
+
+  @media screen and (max-width: $breakpoint-md) {
+    @include typography($body-3-semibold);
+    padding: 9px 24px;
+    border-radius: 8px;
+  }
+  @media screen and (min-width: $breakpoint-md) {
+    @include typography($body-2-semibold);
+    padding: 13px 24px;
+    border-radius: 8px;
+  }
+  @media screen and (min-width: $breakpoint-lg) {
+    @include typography($body-1-semibold);
+    padding: 20px 24px;
+    border-radius: 12px;
+  }
 }
 
 .large {
@@ -121,4 +137,8 @@
 
 .btn-icon path {
   transition: all 0.2s;
+}
+
+.wide {
+  width: 100%;
 }

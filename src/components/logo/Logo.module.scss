@@ -1,0 +1,16 @@
+.logo-narrow {
+  @media screen and (max-width: $breakpoint-md) {
+    width: 40px;
+    height: 40px;
+  }
+
+  // @media screen and (min-width: $breakpoint-md) {
+  //  width: 40px;
+  //  height: 40px;
+  // }
+
+  // @media screen and (min-width: $breakpoint-lg) {
+  //  width: 40px;
+  //  height: 40px;
+  // }
+}
