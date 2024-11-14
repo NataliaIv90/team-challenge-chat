@@ -3,6 +3,7 @@ export { AvatarBtn } from './avatar/avatarBtn/AvatarBtn';
 export { AvatarRadio } from './avatar/avatarRadio/AvatarRadio';
 export { AvatarSettings } from './avatar/avatarSettings/AvatarSettings';
 export { Button } from './buttons/button/Button';
+export { CarouselCard } from './carouselCard/CarouselCard';
 export { IconButton } from './buttons/iconButton/IconButton';
 export { Input } from './input/Input';
 export { FABbtn } from './buttons/fab/FABbtn';

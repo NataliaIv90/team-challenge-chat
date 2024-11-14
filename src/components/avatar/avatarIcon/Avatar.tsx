@@ -1,6 +1,6 @@
 import { JSX, FunctionComponent } from 'react';
 
-import { setClassnameData } from '@/utils/setClassnameData';
+import { setClassnameData } from '@/utils/functions/setClassnameData';
 import styles from './Avatar.module.scss';
 import { avatarImgsData } from '@/assets/data/avatarImgsData';
 import { TAvatarProps } from '@/types/components';

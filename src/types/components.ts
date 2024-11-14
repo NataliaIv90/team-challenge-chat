@@ -97,3 +97,14 @@ export type TAvatarSettings = {
   size: TSize;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
+
+export type TCarouselCardData = {
+  Img: string;
+  text: string;
+  title: string;
+  active: boolean;
+};
+
+export type TCardData = {
+  data: TCarouselCardData;
+};

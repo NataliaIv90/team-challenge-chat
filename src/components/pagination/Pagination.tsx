@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCarousel } from '@/utils/context/CarouselContext';
 import styles from './Pagination.module.scss';
 
 const paginationBtnsData = [
@@ -8,28 +8,26 @@ const paginationBtnsData = [
 ];
 
 export const Pagination = () => {
-  const [checkedIndex, setCheckedIndex] = useState(0);
+  const { checkedIndex, setCheckedIndex } = useCarousel();
 
   return (
-    <>
-      <form className={styles['pagination']}>
-        {paginationBtnsData.map((el, index) => (
-          <div key={el}>
-            <input
-              className={styles['pagination-radioBtn']}
-              type="radio"
-              name="pagination-btn"
-              id={el}
-              checked={index === checkedIndex}
-              onChange={() => setCheckedIndex(index)}
-            />
-            <label
-              htmlFor={el}
-              className={index === checkedIndex ? styles['checked'] : ''}
-            ></label>
-          </div>
-        ))}
-      </form>
-    </>
+    <form className={styles.pagination}>
+      {paginationBtnsData.map((el, index) => (
+        <div key={el}>
+          <input
+            className={styles['pagination-radioBtn']}
+            type="radio"
+            name="pagination-btn"
+            id={el}
+            checked={index === checkedIndex}
+            onChange={() => setCheckedIndex(index)}
+          />
+          <label
+            htmlFor={el}
+            className={index === checkedIndex ? styles.checked : ''}
+          ></label>
+        </div>
+      ))}
+    </form>
   );
 };

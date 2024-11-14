@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 
 import { Avatar } from '@/components';
-import { setClassnameData } from '@/utils/setClassnameData';
+import { setClassnameData } from '@/utils/functions/setClassnameData';
 import { TAvatarImgData, TFunction, TSize } from '@/types/components';
 
 import styles from './ListItem.module.scss';

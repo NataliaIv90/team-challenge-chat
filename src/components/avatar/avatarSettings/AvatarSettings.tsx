@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react';
 
 import { avatarImgsData } from '@/assets/data/avatarImgsData';
 import { AvatarRadio } from '@/components';
-import { setClassnameData } from '@/utils/setClassnameData';
+import { setClassnameData } from '@/utils/functions/setClassnameData';
 import { TAvatarId, TAvatarSettings } from '@/types/components';
 
 import styles from './AvatarSettings.module.scss';

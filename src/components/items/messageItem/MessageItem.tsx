@@ -1,11 +1,11 @@
 import { FunctionComponent } from 'react';
 
 import { Avatar } from '@/components';
-import { setClassnameData } from '@/utils/setClassnameData';
+import { setClassnameData } from '@/utils/functions/setClassnameData';
 import { TAvatarImgData, TSize } from '@/types/components';
 
 import styles from './MessageItem.module.scss';
-import { formatDate } from '@/utils/formatDate';
+import { formatDate } from '@/utils/functions/formatDate';
 
 export type TMessageItemProps = {
   name: string;

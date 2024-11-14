@@ -1,5 +1,14 @@
 .carousel-card {
   width: 100%;
+  position: absolute;
+  transform: translateX(-150%);
+  opacity: 0;
+  transition: opacity 2s ease;
+
+  &.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .carousel-img-container {
@@ -25,3 +34,16 @@
   color: $secondary-color;
   margin: 0 0 32px;
 }
+
+// .carouselCard {
+//   position: absolute;
+//   transform: translateX(-150%);
+//   opacity: 0;
+//   transition: opacity 0.5s ease;
+//   // display: none;
+// }
+
+// // .carouselCard.active {
+
+// //   // display: block;
+// // }
