@@ -41,7 +41,7 @@ module.exports = [
       'prettier/prettier': 'error',
       'react/jsx-uses-react': 'error',
       'react/jsx-uses-vars': 'error',
-      quotes: ['error', 'single'],
+      quotes: ['error', 'single', { avoidEscape: true }],
     },
     settings: {
       react: {

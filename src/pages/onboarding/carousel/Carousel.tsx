@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
-import { CarouselCard } from '@/components';
+import { Button, CarouselCard } from '@/components';
 import { TCarouselCardData } from '@/types/components';
 import { useCarousel } from '@/utils/context';
 import { useSwipe } from '@/utils/hooks';
@@ -28,24 +28,23 @@ const carouselCardsData: Omit<TCarouselCardData, 'active'>[] = [
   },
 ];
 
-export const Carousel = () => {
+export const Carousel = (/*{ intervalDuration = 5000 }*/) => {
   const { checkedIndex, setCheckedIndex } = useCarousel();
 
-  // Use the custom swipe hook, passing in carousel data length and the state setter
   const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipe(
     carouselCardsData.length,
     setCheckedIndex
   );
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCheckedIndex(
-        (prevIndex) => (prevIndex + 1) % carouselCardsData.length
-      );
-    }, 5000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCheckedIndex(
+  //       (prevIndex) => (prevIndex + 1) % carouselCardsData.length
+  //     );
+  //   }, intervalDuration);
 
-    return () => clearInterval(interval);
-  }, [setCheckedIndex]);
+  //   return () => clearInterval(interval);
+  // }, [setCheckedIndex, intervalDuration]);
 
   return (
     <section
@@ -53,6 +52,9 @@ export const Carousel = () => {
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
+      role="region"
+      aria-roledescription="carousel"
+      aria-live="polite"
     >
       {carouselCardsData.map((el, index) => (
         <CarouselCard
@@ -60,6 +62,9 @@ export const Carousel = () => {
           data={{ ...el, active: index === checkedIndex }}
         />
       ))}
+      <div className={styles['carousel-skipbtn-wrapper']}>
+        <Button text="Next" buttonVariant="primary" fullWidth={true} />
+      </div>
     </section>
   );
 };

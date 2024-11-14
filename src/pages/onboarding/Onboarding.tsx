@@ -6,9 +6,11 @@ import { Header } from './header/Header';
 export const Onboarding = () => {
   return (
     <CarouselProvider>
-      <Header />
-      <Carousel />
-      <Footer />
+      <div className="onboarding">
+        <Header />
+        <Carousel />
+        <Footer />
+      </div>
     </CarouselProvider>
   );
 };

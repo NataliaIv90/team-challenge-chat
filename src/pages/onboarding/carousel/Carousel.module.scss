@@ -3,7 +3,20 @@
   overflow: hidden;
   height: 75vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: $breakpoint-lg) {
+    flex-direction: column;
+    gap: 80px;
+  }
+}
+
+.carousel-skipbtn-wrapper {
+  width: 440px;
+  height: 64px;
+
+  @media screen and (max-width: $breakpoint-lg) {
+    display: none;
+  }
 }

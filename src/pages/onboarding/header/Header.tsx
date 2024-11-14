@@ -9,7 +9,9 @@ export const Header = () => {
       <Link to="/">
         <Logo />
       </Link>
-      <Button text="Skip" buttonVariant="text"></Button>
+      <div className={styles['header-logo-wrapper']}>
+        <Button text="Skip" buttonVariant="text"></Button>
+      </div>
     </header>
   );
 };

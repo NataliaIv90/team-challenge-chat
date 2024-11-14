@@ -4,13 +4,8 @@
     height: 40px;
   }
 
-  // @media screen and (min-width: $breakpoint-md) {
-  //  width: 40px;
-  //  height: 40px;
-  // }
-
-  // @media screen and (min-width: $breakpoint-lg) {
-  //  width: 40px;
-  //  height: 40px;
-  // }
+  @media screen and (min-width: $breakpoint-md) {
+    width: 64px;
+    height: 64px;
+  }
 }

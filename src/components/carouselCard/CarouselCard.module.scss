@@ -5,34 +5,76 @@
   opacity: 0;
   transition: opacity 2s ease;
 
+  @media screen and (min-width: $breakpoint-md) {
+    height: 100%;
+    display: flex;
+    justify-content: stretch;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    height: auto;
+    position: static;
+    display: none;
+    text-align: center;
+  }
+
   &.active {
+    display: block;
     transform: translateX(0);
     opacity: 1;
   }
 }
 
 .carousel-img-container {
-  width: 100%;
+  width: 90%;
   height: 342px;
   margin-bottom: 20px;
+
+  @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+    height: 80%;
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    display: none;
+  }
 }
 
 .carousel-img {
   object-fit: contain;
   display: block;
   margin: 0 auto;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .carousel-title {
   @include typography($heading-5);
   color: $white-color;
   margin-bottom: 8px;
+
+  @media screen and (min-width: $breakpoint-md) {
+    @include typography($heading-3);
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    @include typography($heading-1);
+  }
 }
 
 .carousel-text {
   @include typography($body-3-regular);
   color: $secondary-color;
   margin: 0 0 32px;
+
+  @media screen and (min-width: $breakpoint-md) {
+    @include typography($body-1-medium);
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    @include typography($subheading-1-medium);
+  }
 }
 
 // .carouselCard {
